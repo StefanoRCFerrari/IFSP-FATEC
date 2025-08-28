@@ -1,6 +1,6 @@
 let alunos = []
 let studentAmount = prompt("Quantos alunos temos?")
-while (parseInt(studentAmount) < 0 || isNaN(parseInt(studentAmount)))
+while (parseInt(studentAmount) < 0 || isNaN(parseInt(studentAmount)) || (parseInt(studentAmount)) !== (parseFloat(studentAmount)))
 {
     studentAmount = prompt("Input Inválido. Quantos alunos temos?")
 }
