@@ -100,3 +100,40 @@ for (cont = 1; cont <= 8; cont++)
     texto2 = vetor.join('')
     console.log(`${texto2}`)
 }
+
+espacos = 7
+num = 1
+linha = 1
+
+texto3 = ""
+
+espacos = 7
+num = 1
+linha = 1
+
+texto3 = ""
+
+for (cont = 1; cont <= 8; cont++)
+{
+    for (cont2 = 1; cont2 <= espacos; cont2++)
+       texto3 += " "
+    
+    for (cont2 = 1; cont2 < linha; cont2++)
+    {
+       texto3 += num
+       texto3 += " "
+       num += 1
+    }
+    
+    texto3 += num
+    num += 1
+    
+    for (cont2 = 1; cont2 <= espacos; cont2++)
+       texto3 += " "
+    
+    console.log(`${texto3}`)
+    espacos -= 1
+    linha += 1
+    texto3 = ''
+    
+}
