@@ -97,3 +97,18 @@ const mult = (a,b) =>{
 const dividir = (a, b) => a/b;
 
 
+//exs
+
+let isPar = (a) => a%2 == 0;
+
+console.log(isPar(2));
+console.log(isPar(23));
+console.log(isPar(564));
+console.log(isPar(76));
+console.log(isPar(85));
+
+let maiuscula = (texto ="") => texto.toUpperCase();
+
+
+console.log(maiuscula("teste"));
+console.log(maiuscula("Hello word"));
