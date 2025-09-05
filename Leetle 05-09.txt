@@ -1,0 +1,19 @@
+def solve(arr1, arr2):
+  ordered = []
+  resto=[]
+  
+  for ordenador in range (0, len(arr2)):
+    for elementos in range (0, len(arr1)):
+      if arr1[elementos] == arr2[ordenador]:
+        ordered.append(arr1[elementos])
+
+  for elementos in range (0, len(arr1)):
+    if not (arr1[elementos] in ordered):
+      resto.append(arr1[elementos])
+
+  resto.sort()
+
+  for elementos in range (0, len(resto)):
+    ordered.append(resto[elementos])
+      
+  return ordered
