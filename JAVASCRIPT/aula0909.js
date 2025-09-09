@@ -4,7 +4,6 @@ var qtdTent;
 var indice = [];
 var tentativa = [];
 
-// Declared outside to be accessible everywhere
 var acertos = 0; 
 
 function menuInicial() {
@@ -25,14 +24,16 @@ function geraJogadas() {
     return indice;
 }
 
-function tentaSimulador() {
+function tentaPlayer() {
     tentativa = [];
     for (let i = 0; i < qtdMoe; i++) {
-        let chute = Number(Math.random());
-        if (chute < 0.5) {
+        let chute = prompt("Tentativa pra primeira moeda.")
+        if (chute == "Cara") {
             tentativa.push("Cara");
-        } else {
+        } else if (chute == "Coroa") {
             tentativa.push("Coroa");
+        } else {
+            console.log("Chute inválido")
         }
     }
     return tentativa;
@@ -41,7 +42,7 @@ function tentaSimulador() {
 function simulaTenta() {
     for (let cont = 1; cont <= qtdTent; cont++) {
         console.log(`\n--- Tentativa ${cont} de ${qtdTent} ---`);
-        tentativa = tentaSimulador();
+        tentativa = tentaPlayer();
         acertos = 0;
 
         for (let comp = 0; comp < qtdMoe; comp++) {
