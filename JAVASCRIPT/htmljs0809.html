@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mensagem de boas vindas!</title>
+    </head>
+    <body>
+        <h2>Qual seu nome?</h2>
+        <input type="text" id="campoNome" placeholder="Digite seu nome">
+        <button onclick="mostrarMensagem()">Enviar</button>
+        <p id="mensagemResultado"></p>
+        
+        <script>
+            function mostrarMensagem() {
+                const campoNome = document.getElementById('campoNome')
+                const nomeDigitado = campoNome.value
+                const mensagemResultado = document.getElementById('mensagemResultado')
+                mensagemResultado.textContent = `Olá, ${nomeDigitado}! Seja bem vindo!`
+            }
+        </script>
+    </body>
+</html>
