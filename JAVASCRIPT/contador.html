@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Contador</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+     <script src='contador.js' async></script>
+     <!-- <script src='contador.js' defer></script> -->
+
+     <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: lightgray;
+            display: flex;
+            background-image: url("https://ddez.com.br/wp-content/uploads/2018/11/japubliquei.jpg");
+            background-size: cover;
+        }
+
+        .containner{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .containner-contador{
+            background-color: azure;
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            text-align: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+
+        .btn{
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+            background-color: green;
+            color: white;
+            font-size: 23px;
+        }
+
+        #btn-menos{
+            background-color: brown;
+        }
+
+
+     </style>
+</head>
+<body>
+    <div class="containner">
+        <div class="containner-contador">
+            <h1>Contador</h1>
+            <h2 id="nContador">0</h2> <!-- Display - Output  -->
+            <div>
+                <button class="btn" id="btn-menos" onclick="diminuir()"> - </button>
+                <button class="btn" id="btn-mais" onclick="aumentar()"> + </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        /*let valor = 0;
+        const nCont = document.getElementById("nContador");
+
+        function diminuir(){
+            valor = valor - 1;
+
+            nCont.textContent = `${valor}`;
+        }
+
+        function aumentar(){
+            valor = valor + 1;
+
+            nCont.textContent = `${valor}`;
+        }*/
+        </script> -->
+       
+</body>
+</html>
