@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    background-image: url(imgs/math.png);
+}
+
+body button{
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 40px;
+    width: 150px;
+    box-shadow: 1px 1px black;
+    background-image: linear-gradient(to bottom right, rgb(141, 158, 233), rgb(213, 223, 243));
+}
+
+body h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    color: rgb(77, 150, 235);
+    text-shadow: 1px 1px rgb(39, 62, 163);
+}
+
+body h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 70px;
+    color: rgb(77, 150, 235);
+    text-shadow: 1px 1px rgb(39, 62, 163);
+}
