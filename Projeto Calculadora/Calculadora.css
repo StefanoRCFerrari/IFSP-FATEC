@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+}
+
+body button{
+    display: flexbox;
+    padding: 15px;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    align-items: center;
+}
