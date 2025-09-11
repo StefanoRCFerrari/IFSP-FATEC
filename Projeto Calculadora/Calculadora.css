@@ -9,4 +9,6 @@ body button{
     height: 15px;
     margin: 5px;
     align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px black;
 }
