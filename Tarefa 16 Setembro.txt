@@ -1,0 +1,100 @@
+1 - Object
+
+2
+a - 0, 2
+b - "105"
+c - "Dentro do intervalo"
+d - "Olá, João!"
+
+3
+a - 3
+b - 5
+c - Erro (V5 é só o elemento removido, ou seja, o número 21, o qual não recebe o método .pop())
+
+4 - NaN
+
+5 - 105
+6 - 5
+
+7
+a:
+function aleatorio(){
+    for (let sequencia = 1; sequencia <= 10; sequencia++)
+    {
+        lista = []
+        for (let gerador = 0; gerador < 5; gerador++)
+        {
+            let n = parseInt(Math.round((Math.random()*10)))
+            lista.push(n)
+        }
+        console.log(`Sequência ${sequencia}: ${lista}`)
+    }
+}
+
+b: (colocar a função multiplicar para ser chamada dentro da função aleatório para já fazer o console.log())
+function multiplicar(lista){
+    let produto = 1
+    for (contador = 0; contador < lista.length; contador++)
+        produto *= lista[contador]
+    return produto
+}
+
+c: (colocar a função multiplicar para ser chamada dentro da função aleatório para já fazer o console.log())
+function armazenar(resultado, produtos){
+    return produtos.push(resultado)}
+
+d: Basta um console.log(`Todos os produtos: ${produtos}`)
+
+Programa completo:
+function aleatorio(){
+    for (let sequencia = 1; sequencia <= 10; sequencia++)
+    {
+        lista = []
+        for (let gerador = 0; gerador < 5; gerador++)
+        {
+            let n = parseInt(Math.round((Math.random()*10)))
+            lista.push(n)
+        }
+        console.log(`Sequência ${sequencia}: ${lista}`)
+        produto = multiplicar(lista)
+        console.log(`Produto: ${produto}`)
+        
+        armazenar(produto, produtos)
+    }
+}
+
+function multiplicar(lista){
+    let produto = 1
+    for (contador = 0; contador < lista.length; contador++)
+        produto *= lista[contador]
+    return produto
+}
+
+function armazenar(resultado, produtos){
+    return produtos.push(resultado)}
+
+produtos = []
+aleatorio()
+console.log(`Todos os produtos: ${produtos}`)
+
+
+
+
+Código das derivadas:
+
+const prompt = require("prompt-sync")()
+
+let qtdTerm = parseInt(prompt("Quantos termos inserir?"))
+let derivada = []
+
+for (let contador = 1; contador <= qtdTerm; contador++)
+{
+    let coeficiente = Number(prompt(`Insira o coeficiente do ${contador}° termo: `))
+    let expoente = Number(prompt(`Insira o expoente do ${contador}° termo: `))
+    let novoCoef = Number(coeficiente*expoente)
+    let novoExp = Number(expoente-1)
+    let termoAtual = `${novoCoef}x^${novoExp}`
+    derivada.push(termoAtual)
+}
+
+console.log(`Derivada: ${derivada}`)
