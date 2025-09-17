@@ -37,3 +37,26 @@ palindromo("casa")
 palindromo("rato")
 palindromo("asa")
 palindromo("ana")
+
+function formataAula(argumento){
+    let novoargumento = ""
+    
+    for (let contador = 0; contador < argumento.length; contador++)
+    {
+        if (novoargumento.length == 0 && argumento[contador] == " ")
+            continue
+        else if (novoargumento.length == 0)
+            novoargumento += argumento[contador].toUpperCase()
+        else if (argumento[contador-1] === " " && argumento[contador] !== " ")
+            novoargumento += argumento[contador].toUpperCase()
+        else if (argumento[contador-1] !== " ")
+            novoargumento += argumento[contador].toLowerCase()
+        
+    }
+    console.log(`${novoargumento}`)
+}
+
+formataAula("tESte nÚmERO Um")
+formataAula("       tESTE nÚMERO dOIS")
+formataAula("          teSTe             nÚmero  trêS")
+formataAula("   tEsTe    NúMeRo      qUatRo         ")
