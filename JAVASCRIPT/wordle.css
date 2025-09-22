@@ -1,0 +1,64 @@
+body{
+    text-align: center;
+    background-color: rgb(253, 244, 214);
+}
+
+body h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 400%;
+    color: rgb(26, 32, 105);
+}
+
+body p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 200%;
+    color: rgb(26, 32, 105);
+}
+
+body input{
+    text-align: center;
+}
+
+body #palpite{
+    width: 15%;
+}
+
+body #chutar{
+    width: 5%;
+    padding: 0.5%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
+    background-color: rgb(241, 220, 150);
+    border-radius: 6px;
+    border: 2px solid rgb(26, 32, 105);;
+    cursor: pointer;
+    color: rgb(26, 32, 105);
+    box-shadow: 1px 1px rgb(14, 19, 71);
+}
+
+body #chutar:hover{
+    background-color: rgb(241, 207, 115);
+}
+
+body #contador{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
+    color: rgb(26, 32, 105);
+}
+
+.correta{
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.parcial{
+    color: orange;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.errada{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
