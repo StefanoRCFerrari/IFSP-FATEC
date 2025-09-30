@@ -1,12 +1,25 @@
 Calc Max Min + Int
-Input String (terminal) + Button (HTML)
+Input String (terminal) + Button (HTML) -> Instruções de uso p/ console + Visualização HTML (mostrar ambas p/ 2ª ordem)
 UX
 
 Derivadas de 1ª e 2ª ordem
 Determinar PC, max e min
 Tombo e Cadeia
 
+P/ saída gráfica, usar pacotes externos
+
+Documentação
+Resumo
+Introdução
+Dev pt teórica:
+   ° Pt 1. calc
+   ° Pt 2. JS
+Histórico
+Testes
+Conclusão
+
 Pt 1. Due Oct 21
+
 -----
 
 Pt 2. - Integral (Newton-Cotes (do trapézio) / Simpson / Riemann)
@@ -14,8 +27,9 @@ Due Nov 04
 
 -----
 
-Grade:
+Grade JS:
 - Interface 20%
+   ° Facilidade de uso (Ex - Área de Calor)
 - Pt 1. - 35%
 - Pt 2. - 35%
 - UX - 10%
