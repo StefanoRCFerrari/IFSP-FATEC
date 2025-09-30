@@ -1,0 +1,110 @@
+body{
+    font-family: Arial;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.container-input{
+    background-color: white;
+    width: 55%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 10px;
+}
+
+.area-input{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.container-input #campo-tarefa{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+#botao-add{
+    padding-inline: 15px;
+    height: 43px;
+    margin-left: 10px;
+    color: white;
+    background-color: forestgreen;
+    border-radius: 2px;
+    border: none;
+}
+
+.container-taferas{
+    display: flex;
+    background-color: white;
+    width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+
+
+.item-lista{
+    text-decoration: none;
+    list-style: none;
+    border: solid 1px black;
+    border-radius: 8px;
+    width: 80%;
+    margin:12px;
+    padding: 30px;
+}
+
+li .tarefa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+}
+
+li .tarefa .content-list{
+    max-width: 80%; 
+    flex: 1; /* Faz a div ocupar o espaço restante */
+    word-wrap: break-word;  /* Faz o texto quebrar de linha */
+    overflow-wrap: break-word;  /* Garante que o texto não ultrapasse o limite da caixa */
+}
+
+
+li .botao-rmv{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: brown;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+li .botao-rmv:hover{
+    background-color: rgb(107, 35, 35);
+    color: white;
+}
+
+
+
+.tarefa-concluida{
+    color: white;
+    transition: 0.5s;
+    background-color: #8CBD8C;
+}
+.tarefa-concluida span{
+    text-decoration: line-through;
+}
+
+h1{
+    color: brown;
+}

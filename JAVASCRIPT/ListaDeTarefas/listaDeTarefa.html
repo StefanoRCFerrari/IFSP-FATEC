@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lista de Tarefas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js' defer></script>
+</head>
+<body>
+       
+    <div id="app" class="container-input">
+        <h1>Lista de Tarefas</h1>
+        <div class="area-input">
+            <input id="campo-tarefa" type="text" placeholder="Digite uma nova tarefa..." onkeydown="verificarTecla(event)">
+            <button id="botao-add" onclick="adicionarTarefa()">+</button>
+        </div>
+    </div>
+    <div class="container-taferas" id="tarefas">
+        <ul id="lista-tarefas"></ul>
+    </div>
+    
+ 
+</body>
+</html>
