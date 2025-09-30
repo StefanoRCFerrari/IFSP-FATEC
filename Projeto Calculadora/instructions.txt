@@ -1,0 +1,21 @@
+Calc Max Min + Int
+Input String (terminal) + Button (HTML)
+UX
+
+Derivadas de 1ª e 2ª ordem
+Determinar PC, max e min
+Tombo e Cadeia
+
+Pt 1. Due Oct 21
+-----
+
+Pt 2. - Integral (Newton-Cotes (do trapézio) / Simpson / Riemann)
+Due Nov 04
+
+-----
+
+Grade:
+- Interface 20%
+- Pt 1. - 35%
+- Pt 2. - 35%
+- UX - 10%
