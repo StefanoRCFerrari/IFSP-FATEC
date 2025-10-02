@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastro POO em JS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js' defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro POO de Pessoas</h1>
+        <div class="formPessoa">
+            <form onsubmit="return cadastrarPessoa()">
+                <label for="nome">Nome Completo: </label>
+                <input type="text" id="nome" required>
+    
+                <label for="email">Email: </label>
+                <input type="email" id="email" required>
+    
+                <label for="telefone">Telefone: </label>
+                <input type="tel" id="tel">
+    
+                <label for="data">Data de nascimento: </label>
+                <input type="date" id="nascimento"> 
+    
+                <button type="submit"> Cadastrar Pessoa </button>
+            </form>
+        </div>
+        <hr>
+        <h2>Pessoas Cadastrdas</h2>
+        <ul id="listaUsuarios"></ul>
+    </div>
+</body>
+</html>
