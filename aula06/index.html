@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exemplos de posicionamento css</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            height: 2000px;
+        }
+
+        .container{
+            width: 80%;
+            margin: 30px auto;
+            background-color: white;
+            border: 2px solid #ccc;
+            padding: 20px;
+        }
+
+        .box{
+            width: 150px;
+            height: 100px;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+
+            line-height: 100px;
+            font-weight: bold;
+            border: 1px solid #388e3c;
+            display: inline-block;
+        }
+
+        h2{
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        /* Position: static (padrão) */
+
+        .static-box{
+            position: static;
+            background-color: #2196f3;
+            line-height: 20px;
+            height: auto;
+            padding: 20px 10px;
+        }
+
+        /* Position: Relative */
+        .relative-box{
+            position: relative;
+            top: 30px;
+            left: 500px;
+            background-color: #ff9800;
+        }
+
+        /* Position: Absolute */
+        .parent-relative{
+            /* O pai deve ser relative, para servir de referencia ao filho (absolute) */
+            position: relative;
+            height: 250px;
+            background-color: #e0f7fa;
+            border: 2px dashed #00bcd4;
+            padding: 40px;
+        }
+
+        .absolute-box{
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background-color: #e91e63;
+        }
+
+        .outro-box{
+            background-color: #765548;
+        }
+
+
+        /* Position: sticky */
+
+        .sticky-section{
+            background-color: #cfd8dc;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .sticky-header{
+            position: sticky;
+            top: 0;
+            background-color: #009688;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Position: fixed */
+
+        .fixed-box{
+            position: fixed;
+            bottom: -10px;
+            right: -10px;
+            width: 180px;
+            height: 50px;
+            line-height: 50px;
+            z-index: 1000;
+            background-color: #e91e63;
+            color: white;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+    <div class="box fixed-box"> Estou fixo (fixed) </div>
+    <h1>Exemplos de Position no CSS</h1>
+    <div class="container">
+        <h2> 1. Position: static (padrão) </h2>
+        <div class="box static-box">
+            Eu sou o 'static'. <br> Ignoro o 'top', 'left', 'right' ... sigo o fluxo normal
+        </div>
+        <div class="box">Outro box</div>
+        <p> O elemento 'static' é o comportamento padrão e não pode ser movido com as propriedades offset ...</p>
+    </div>
+
+    <!-- Relative -->
+
+    <div class="container">
+        <h2> 2. Position: Relative </h2>
+
+        <div class="box">Posição original</div> 
+        <div class="box relative-box">Relative </div>
+        <!-- (movido 20px para baixo e 30px p/ direita) -->
+        <div class="box"> Original 2 </div>
+        <!-- ( o espaço do box 'relative' é mantido). -->
+        <p>O 'relative-box' se move em relação a sua posição normal, mas o espaço que ele ocpa no layout permanace reservado.</p>             
+    </div>
+
+    <!-- Absolte -->
+     <div class="container parent-relative">
+         <h2> 3. Position: Absolute (Filho em Pai relative) </h2>
+        <div class="box">Original 1</div>
+        <div class="box absolute-box">Absolute</div>
+        <div class="box">Original 2</div>
+     </div>
+
+     <!-- sticky -->
+
+     <div class="sticky-section">
+        <div class="sticky-header"> 4. Position: Sticky (role a página para ver!)</div>
+        <div class="container" style="background-color: #e0f7fa; height: 300px; padding: 20px;">
+            <p>Este é o conteúdo abaixo cabeçalho sticky. Continue rolando... </p>
+            <p>O 'stick-header' irá aderir ao topo quando a rolagem do container atingir o valor de 'top: 0'</p>
+        </div>
+
+        <div class="container" style="background-color: #fff; height: 500px; padding: 20px;">
+            <p>Mais conteúdo para garantir que a rolagem funcione</p>
+        </div>
+     </div>
+
+     <!-- fixed -->
+      <div class="container">
+        <h2>5. Position: fixed</h2>
+        <p>O elemento com 'position: fixed', (box vermelho com canto inferior direito) é posicionado </p>
+      </div>
+
+</body>
+</html>
