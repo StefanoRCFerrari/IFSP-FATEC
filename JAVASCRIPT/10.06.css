@@ -1,0 +1,93 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container{
+    width: 80%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+}
+
+.box{
+    width: 150px;
+    height: 100px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    border: 1px solid #388e3c;
+    display: inline-block;
+}
+
+h2{
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+
+}
+
+.staticBox{
+    position: static;
+    background-color: #2196f3;
+    line-height: 20px;
+}
+
+.relativeBox{
+    position: relative;
+    top: 20px;
+    left: 30px;
+    background-color: #ff9800;
+}
+
+.absoluteBox{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #e91e62;
+}
+
+.parentRelative{
+    position: relative;
+    background-color: #e0f7fa;
+    height: 250px;
+    border: 2px dashed #00bcd4;
+    padding: 40px;
+}
+
+.stickyContainer{
+    background-color: #e0f7fa;
+    height: 300px;
+    padding: 20px;
+}
+
+.stickySession{
+    background-color: #cfd8dc;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.stickyHeader{
+    position: sticky;
+    top: 0;
+    background-color: #009688;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.fixedBox{
+    background-color: #f51212;
+    position: fixed;
+    bottom: -10px;
+    right: -10px;
+    z-index: 2;
+}
