@@ -1,36 +1,114 @@
-let pedido = "Sushi"
+//Switch
 
-switch (pedido){
-
-    case "Hamburger":
-        console.log("Você pediu um Hamburger")
+const fruta = "laranja";
+switch (fruta) {
+    case "uva":
+        console.log("Sua fruta para o lanche é uva");
         break;
-
-    case "Pizza":
-        console.log("Você pediu uma Pizza")
+    case "morango":
+        console.log("Sua fruta para o lanche é morango");
         break;
-
-    case "Hotdog":
-        console.log("Você pediu um Hotdog")
+    case "LARANJA":
+    case "laranja":
+        console.log("Sua fruta para o lanche é laranja");
         break;
-    
     default:
-        console.log("Não entendi seu pedido ou você não pediu nada...")
+        console.log("Não há frutas para o lanche");
 }
 
-linhaAnterior = [1]
-proximaLinha = [1, 1]
+//Operador Ternário -
 
-console.log(linhaAnterior)
-console.log(proximaLinha)
+let condicao = true;
 
-for (cont = 3; cont <= 9; cont++) {
-    linhaAnterior = proximaLinha
-    proximaLinha = [1]
-    let pos = 1;
-    while (proximaLinha.length < linhaAnterior.length){
-        proximaLinha.push(linhaAnterior[pos]+linhaAnterior[pos-1])
-        pos++
-    }
-    proximaLinha.push(1)
-    console.log(proximaLinha)}
+condicao ? console.log("Condição é verdadeira!!") : console.log ("Condição é falsa!!");
+
+10 > 22 ? console.log("10 é maior") : console.log("10 não é maior");
+
+//exercícios: 
+
+let podeDirigir;
+let idade = 18;
+
+idade > 17 ? podeDirigir ="SIM" : podeDirigir = "NÃO";
+
+let estaSol = true;
+let temGuardaChuva = false;
+
+estaSol || temGuardaChuva ? console.log("Pode sair!!") : console.log("Não pode sair!!");
+
+let cond = 0 === false;
+
+console.log("0 === false = ", cond);
+
+
+//biblioteca Math
+let num = -6.25;
+let num2 = 3
+console.log(Math.abs(num)); //valor absoluto
+console.log(Math.ceil(num));  //arredonda para cima
+console.log(Math.floor(num)); //arredonda para baixo
+console.log(Math.round(num));  //para n inteiro mais prox
+console.log(Math.pow(num2, 3));  //base elavado ao exp
+console.log(Math.sqrt(num2)); //raiz quadrada
+
+console.log("\nRandom");
+                //[0,1[
+console.log(Math.random());
+
+
+                            //intervalo + 1 inclui o maximo      
+function gerarNumeroAleatorio(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let numero = gerarNumeroAleatorio(0, 10);
+console.log(numero); // Exemplo: 7
+
+
+//sort e reverse
+
+let numeros = [7, 3, 34, 66, 2, 76, 77, 33, 67, 1, 87];
+
+console.log(numeros.sort()); //array em ordem crescente ou alfabética
+console.log(numeros.reverse()); //inverte as posições
+
+//funçoes
+
+soma(1,2); // - independende do lugar a onde a função foi declarada
+
+//somar(3,4); - essa só pode ser usada abaixo da sua inicialização
+
+function soma(a,b){
+    console.log(a+b);
+    return
+}
+
+const somar = function(a,b){
+    console.log(a+b);
+};
+
+somar(3,4);
+
+
+const mult = (a,b) =>{
+    return (a*b);
+};
+
+const dividir = (a, b) => a/b;
+
+
+//exs
+
+let isPar = (a) => a%2 == 0;
+
+console.log(isPar(2));
+console.log(isPar(23));
+console.log(isPar(564));
+console.log(isPar(76));
+console.log(isPar(85));
+
+let maiuscula = (texto ="") => texto.toUpperCase();
+
+
+console.log(maiuscula("teste"));
+console.log(maiuscula("Hello word"));
