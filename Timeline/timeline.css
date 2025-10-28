@@ -1,0 +1,141 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* --- Timeline Container (30% width) --- */
+        .timeline-container {
+            width: 30%; /* 30% of the screen */
+            background-color: #f4f4f4;
+            padding: 20px;
+            position: relative;
+            border-right: 2px solid #ccc;
+            overflow-y: auto;
+            /* Flex properties for vertical spacing of spots */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Timeline Base --- */
+        .timeline {
+            position: relative;
+            /* Vertical line in the middle of the timeline area */
+            height: 100%;
+            padding-left: 50px; /* Space for the date */
+        }
+
+        /* The vertical line */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%; /* Position the line roughly in the center of the 30% container */
+            transform: translateX(-50%); /* Center the line */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #000;
+        }
+
+        /* --- Individual Spot on the Timeline --- */
+        .timeline .spot {
+            position: relative;
+            margin-bottom: 60px; /* Spacing between events */
+            padding: 10px 0; /* Padding for hover effect */
+            cursor: pointer;
+            display: flex; /* Allows date and dot to be aligned */
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        /* The dot on the timeline */
+        .timeline .spot::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #000;
+            border-radius: 50%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 1; /* Ensure dot is above the line */
+            border: 2px solid #f4f4f4; /* Creates a cutout effect */
+        }
+        
+        /* The Date text */
+        .timeline .spot .date {
+            font-weight: bold;
+            font-size: 14px;
+            /* Position to the left of the timeline line */
+            position: absolute;
+            right: 50%; /* Position the right edge of the date to the timeline line */
+            padding-right: 20px;
+            text-align: right;
+            white-space: nowrap; /* Prevents date from wrapping */
+            transform: translateX(-20px); /* Fine-tune positioning */
+        }
+
+        .timeline .spot:hover {
+            background-color: #ddd;
+        }
+
+        /* --- Summary Container (70% width) --- */
+        .summary-container {
+            width: 70%; /* 70% of the screen */
+            padding: 40px; /* Increased padding for better content spacing */
+            overflow-y: auto;
+        }
+
+        .event-summary {
+            display: none; /* All summaries hidden by default (will be toggled by JS) */
+            margin-bottom: 40px;
+        }
+
+        /* Ensure the first event is block-level by default if no JS runs, 
+           but the script will handle the initial state */
+        .event-summary.active {
+            display: block;
+        }
+        
+        .event-summary h2 {
+            font-size: 28px; /* Slightly larger title */
+            margin-bottom: 15px;
+        }
+
+        .event-summary .pic-placeholder {
+            width: 300px; /* Fixed width for placeholder */
+            height: 200px; /* Fixed height for placeholder */
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .event-summary p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .event-summary a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Helps with layout */
+            margin-top: 5px;
+        }
+
+        /* Styling for the Read More link */
+        .event-summary a:hover {
+            text-decoration: underline;
+        }
