@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DOM Lab - Validação, Eventos, Delegação e LocalStorage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js' defer></script> 
+</head>
+<body>
+    <main class="app">
+        <!-- Apresentação do app -->
+        <h1>Laboratório do DOM</h1>
+        <p class="lead"> Validação em tempo real, propagação (captura/bolha),
+            delegação com animações e <code>LocalStorage</code>
+        </p>
+        <!-- Navegação  -->
+        <nav class="tabs" role="tablist" aria-label="Seções do Laboratório">
+            <button class="tab" role="tab" aria-selected="true" data-taget="#s1"> Form(Valiadação) </button>
+            <button class="tab" role="tab" aria-selected="false" data-taget="#s2"> Eventos(captura/bolha) </button>
+            <button class="tab" role="tab" aria-selected="false" data-taget="#s3"> To-do(delagação+Storage) </button>
+        </nav>
+        <!-- Seção 1: Validação -->
+        <section id="#s1" class="section ative">
+            <h2> 1) Validação do Formulário em tempo real </h2>
+            <form action="" class="form" id="signup" novalidate>
+                <div class="field">
+                    <label for="nome">Nome</label>
+                    <input id="nome" name="nome" type="text" minlength="3" placeholder="Digite seu nome completo" required>
+                    <div class="error" id="err-nome" aria-live="polite"></div>
+                    <div class="hint">Mínimo 3 caracteres</div>
+                </div>
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="seu.nome@email.com" required>
+                    <div class="error" id="err-email" aria-live="polite"></div>
+                    <div class="hint">Use um email válido</div>
+                </div>
+                <div class="field">
+                    <label for="senha">Senha</label>
+                    <input id="senha" name="senha" type="password" minlength="6" placeholder="Crie sua senha" required>
+                    <div class="error" id="err-senha" aria-live="polite"></div>
+                    <div class="hint">Mínimo 6 caracteres, combine letras e números</div>
+                </div>
+
+                <button class="submit" type="submit">Criar conta</button>
+                <div id="ok-form" class="ok" aria-live></div>
+            </form>
+        </section>
+         <!-- Seção 2: Captura/Bolha -->
+        <section id="s2" class="section">
+            <h2>2) Propagação de eventos: Capture e Bolha</h2>
+            <div class="bubble-lab">
+                <div class="row">
+                    <span class="pill">Ordem: <strong>Capture -> alvo -> Bolha</strong></span>
+                    <label class="pill"><input id="use-caputure" type="checkbox"> Usar <strong>stopPropagation()</strong></label>
+                    <button id="clear-log" class="tab" type="button">Limpar log</button>
+                </div>
+
+            <div id="outer" class="bf" style="padding: 28px;">
+                Outer
+                <div id="middle" class="bf" style="margin-top: 12px;"> 
+                    Middle
+                    <div id="inner" class="bf" style="margin-top: 12px;">
+                        Inner (Clique aqui)
+                    </div>
+                </div>
+            </div>
+
+            <div id="log" class="log" aria-live="polite"></div>
+            </div>
+        </section>
+        <!-- Seção 3: Storage -->
+        <section id="s3" class="section">
+            <h2>3) To-do</h2>
+            <div class="todo">
+                <form action="" id="todo-form" autocomplete="off">
+                    <input type="text" id="todo-form" placeholder="Novo item..." required minlength="1">
+                    <button type="submit">Adicionar</button>
+                </form>
+                <ul id="todo-list" class="list" role="list"></ul>
+                <div class="row">
+                    <button id="export-json" class="tab" type="button">Exportar JSON</button>
+                    <button id="clear-done" class="tab" type="button">Remover concluídos</button>
+                    <button id="clear-all" class="tab" type="button">Limpar Tudo    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
